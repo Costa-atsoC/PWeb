@@ -1,0 +1,14 @@
+.HeaderBegin{
+    background-color: #F2B705;
+    height: 4%;
+}
+
+.HeaderBegin__Btn{
+  width: 100%;
+  background-color: none;
+}
+
+.HeaderBegin__Col3{
+  display: flex;
+  justify-content: space-around;
+}
