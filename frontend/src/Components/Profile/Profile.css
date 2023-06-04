@@ -1,0 +1,15 @@
+.Profile__Container{
+  background-color: wheat;
+  margin: 20px 40px;
+}
+
+.Profile__Container__Col2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Profile__Container__Img{
+  border-radius: 50px;
+  width: 60%;
+}

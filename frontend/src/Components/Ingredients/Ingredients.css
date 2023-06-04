@@ -1,0 +1,53 @@
+.Ingredient__Card{
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+}
+
+.Ingredient__Box:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.Ingredient__Box{
+  /* background-color: yellow; */
+  margin-bottom: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
+  max-width: 30vh;
+  height: 40vh;
+}
+
+.Ingredient__Box__Img{
+  max-width: 100%;
+}
+
+.Ingredient__Title{
+  background-color: rgba(245, 245, 245, 0.5);
+  width: 30%;
+  margin-top: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 20px;
+  margin-bottom: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Ingredient__Title > span{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  padding-right: 3%;
+}
+
+.Ingredient__TextLabel{
+  width: 55%;
+}
+
+.Ingredient__Box__PDF {
+  text-decoration: none;
+}

@@ -11,4 +11,5 @@
 .HeaderBegin__Col3{
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }

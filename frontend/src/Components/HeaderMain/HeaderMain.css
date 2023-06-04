@@ -1,0 +1,35 @@
+.HeaderMain__Col3{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  background-color: #F2B705;
+  height: 4%;
+}
+
+.HeaderMain{
+  max-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.HeaderMain__Img{
+  max-height: 10vh;
+  background-color: #F2B705;
+  border: none;
+}
+
+.HeaderMain__Img > img{
+  max-height: 10vh;
+  width: 100%;
+}
+
+.HeaderMain__Icon{
+  background-color: #f2b70500;
+  border: none;
+  height: auto;
+}
+
+.HeaderMain__Col2__Row{
+  padding: 0;
+}

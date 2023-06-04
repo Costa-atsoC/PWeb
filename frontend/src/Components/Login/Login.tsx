@@ -32,13 +32,14 @@ const Login: React.FC = ()  => {
     e.preventDefault();
 
     try{
-      const Info:data = {username, password};
+      const info:data = {username, password};
 
-      const res = await api.post("/login", Info);
+      const res = await api.post("/login", info);
+      console.log(res);
       switch(res.data.Status){
         case "1":
           localStorage.setItem("Token", res.data.Token);
-          alert("Acess");
+          navigate("/", {replace: true});
           break;
         case "2":
           alert("Invalid username or password!");

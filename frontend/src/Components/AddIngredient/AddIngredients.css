@@ -1,0 +1,21 @@
+.addIngredient__container{
+  margin-top: 7%;
+  width: 30%;
+  border: 2px solid black;
+  background-color: #D97904;
+}
+
+.addIngredient__container__Head{
+  padding-top: 4%;
+  padding-bottom: 2%;
+}
+
+.addIngredient__InfoBox{
+  width: 60%;
+}
+
+.addIngredient__InfoBox__Two{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px
+}

@@ -1,17 +1,9 @@
 import { Row, Col, Container } from 'reactstrap'
-import Button, { ButtonProps } from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
+import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 
+import BtnChange from './../styles/style';
 import './HeaderBegin.css'
-
-const BtnChange = styled(Button)<ButtonProps>(() => ({
-  color: '#D92B04',
-  '&:hover': {
-    color: '#618C03',
-    backgroundColor: 'none',
-  }
-}))
 
 const HeaderBegin: React.FC = () => {  
   const navigate = useNavigate();
@@ -21,7 +13,7 @@ const HeaderBegin: React.FC = () => {
       <Row className='HeaderBegin' lg="12">
         <Col lg="1">
           <Button onClick={() => navigate('/', {replace: true})} className='HeaderBegin__Btn'>
-            <img src={require("./../../images/logo.png")} alt="logo"  width="100%"/>
+            <img src={require("./../../images/logo.png")} alt="logo" width="100%"/>
           </Button>
         </Col>
         <Col lg="8">

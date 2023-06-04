@@ -1,0 +1,52 @@
+.Admin__Header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d97904;
+  height: 10vh;
+  padding: 0 5%;
+}
+
+.Admin__BTN{
+  scale: 1.5;
+}
+
+.Admin__Tab1__Row{
+  display: flex;
+  background-color: #d97904b0;
+  margin-bottom: 1%;
+  height: 100%;
+  width: 95%;
+  border-radius: 30px;
+  min-height: 12vh;
+  max-height: 12vh;
+}
+
+.Admin__Tab1__Row__Center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Admin__Tab1__Row__Img {
+  width: 100%;
+  height: auto;
+  max-width: 100px; /* Adjust the maximum width as needed */
+  max-height: 100px; /* Adjust the maximum height as needed */
+}
+
+.Admin__Tab1__ColL{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Admin__Tab1__Btn{
+  background-color: #d9790400;
+  border: none;
+}
+
+.Admin__Tab1__Icon:hover{
+  cursor: pointer;
+  transform: scale(1.5);
+}
