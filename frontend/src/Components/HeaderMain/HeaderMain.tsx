@@ -7,7 +7,6 @@ import BusinessIcon from '@mui/icons-material/Business';
 import CoffeeIcon from '@mui/icons-material/Coffee';
 
 import api from '../../api/api';
-// import BtnChange from './../styles/style';
 
 import './HeaderMain.css'
 
@@ -22,11 +21,17 @@ const  HeaderMain: React.FC = () => {
   const token = localStorage.getItem("Token");
   const config = { headers: {Authorization: `Bearer ${token}`} };
 
+
+  const ab = { id: 1 };
+
   React.useEffect(() => {
     const getData = async () => {
       try{
         const res = await api.post("/userInfo", config);
         setUser(res.data);
+        setCoffee(res.data.coffee);
+        console.log(res.data);
+
         const res2 = await api.post('/admin', { id: res.data.id });
         if (res2.data === 1) {
           setIsAdmin(true);
@@ -37,21 +42,22 @@ const  HeaderMain: React.FC = () => {
         console.log(error)
       }
     }
-    const getPic = async () => {
+    
+    getData();
+    
+  }, []);
+  
+  const coffeAction = async () => {
       try {
         const res = await api.get("/coffee");
         console.log(res.data.file);
         setImgCoffee(res.data.file);
+        window.open(imgCoffee, "_blank");
       } catch (error) {
         console.log(error);
       }
-    }
+  }
 
-    getData();
-    getPic();
-
-  }, []);
-  
 
   return user ? (
     <Container fluid>
@@ -66,9 +72,9 @@ const  HeaderMain: React.FC = () => {
 
         <Col lg="1">
           <Row className='HeaderMain__Col2__Row'>
-            {coffee === 0 ? (
+            {coffee === 1 ? (
               <Col lg="6" className='HeaderMain__Col2'>
-                <button className='HeaderMain__Icon' onClick={() => window.open(imgCoffee, "_blank")}>
+                <button className='HeaderMain__Icon' onClick={() => coffeAction()}>
                   <CoffeeIcon/>
                 </button>
               </Col>

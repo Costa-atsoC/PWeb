@@ -11,8 +11,9 @@ router.post("/", (req,res) => {
   let password = req.body.password;
   let confirmPassword = req.body.confirmPassword;
   let coffe  = req.body.coffe;
-  let image = "/images/default.png"
-
+  coffe === true ? coffe = 1 : coffe = 0;
+  let image = "default.png"
+  console.log("cafe", coffe);
   if(password != confirmPassword){
     console.log("Passwords don't match")
     res.json("1")
@@ -20,7 +21,6 @@ router.post("/", (req,res) => {
     //This is a way to resolve the promise aka (Promise <pending>)
     let a = register(username, email, password, coffe, image);
     a.then((result) => {
-      console.log(result);
       switch (result){
         case "1":
           res.json("2"); //Username or email already exists

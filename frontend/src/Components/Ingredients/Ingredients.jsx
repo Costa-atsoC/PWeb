@@ -1,10 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'; 
+
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { Row } from "reactstrap"
 import { TextField } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
 
 import PDFFile from '../PDF/PDFFile';
 import { PDFDownloadLink } from "@react-pdf/renderer";
@@ -15,6 +18,8 @@ import api from "../../api/api";
 function Ingredients() {
   const [ingredients, setIngredients] = React.useState([]);
   const [search, setSearch] = React.useState('');
+
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     const getIngredients = async () => {
@@ -36,12 +41,15 @@ function Ingredients() {
         <div className='Ingredient__Title'>
           <span>Ingredients</span>
           <TextField type='text' label='Search...' onChange={(e) => setSearch(e.target.value)} className='Ingredient__TextLabel'/>
+          <button onClick={() => navigate("/addIngredient", {replace: true})} className='Ingredient__AddIcon'> 
+            <AddIcon style={{fontSize: "2rem"}}/>
+          </button>
         </div>
       </center>
 
       <Row className='Ingredient__Card' lg='12'>
         {(ingredients || []).filter((item) => {
-          if(search === '')
+          if(ingredients === '')
             return item;
           else (item.Name.toLowerCase().includes(search.toLowerCase()))
             return item;

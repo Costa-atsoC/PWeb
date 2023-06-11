@@ -40,7 +40,7 @@ async function login(username, password){
   let storedId = [];
   let max = 0;
 
-  let checkSQL = "SELECT Id, Name, Email, Password FROM user;";
+  let checkSQL = "SELECT Id, Name, Email, Password, Coffee FROM user;";
   let a = await new Promise((resolve, reject) => 
     db.query(checkSQL, (err, result) => {
       if(err)
@@ -94,7 +94,7 @@ async function token(){
           username: result[0].Name,
           email: result[0].Email,
           password: result[0].Password,
-          coffe: result[0].Coffe,
+          coffee: result[0].Coffee,
           inicio: result[0].Inicio,
           photo: result[0].Photo,
           perfil: result[0].Perfil

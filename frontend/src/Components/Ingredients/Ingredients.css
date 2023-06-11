@@ -51,3 +51,10 @@
 .Ingredient__Box__PDF {
   text-decoration: none;
 }
+
+.Ingredient__AddIcon{
+  background-color: rgba(245, 245, 245, 0);
+  display: flex;
+  margin-left: 2%;
+  margin-right: 2%;
+}

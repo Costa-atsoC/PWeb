@@ -6,6 +6,9 @@ function LoginPage() {
     <>
       <HeaderMain />
       <Ingredients />
+      <footer className="jytdrtdrt">
+
+      </footer>
     </>
   ) 
 }

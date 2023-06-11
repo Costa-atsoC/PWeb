@@ -6,3 +6,7 @@ body{
 hr{
   border: 1px solid black;
 }
+
+button{
+  border: none;
+}
